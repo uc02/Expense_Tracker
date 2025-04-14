@@ -5,11 +5,11 @@ import {
   Routes,
   Route,
   Navigate,
-} from react-router-dom
-import Login from './pages/Auth/login'
-import SignUp from './pages/Auth/SignUp'
-import Home from './pages/Dashboard/Home'
-import Income from './pages/Dashboard/Income'
+} from 'react-router-dom';
+import Login from './pages/Auth/Login'
+import SignUp from './pages/Auth/SignUp';
+import Home from './pages/Dashboard/Home';
+import Income from './pages/Dashboard/Income';
 import Expense from './pages/Dashboard/Expense'
 
 
@@ -23,7 +23,7 @@ const App = () => {
           <Route path='/signup' exact element={<SignUp/>}></Route>
           <Route path='/Dashboard' exact element={<Home/>}></Route>
           <Route path='/income' exact element={<Income/>}></Route>
-          <Route path='/income' exact element={<Expense/>}></Route>
+          <Route path='/expense' exact element={<Expense/>}></Route>
         </Routes>
       </Router>
     </div>
