@@ -13,11 +13,27 @@ const Login = () => {
 
   //handle Login Form submit
 
-  const handleLogin = async (e) => {}
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if(!validateEmail(email)){
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    if (!password){
+      setError('Please enter the password');
+      return;
+    }
+
+    setError("");
+
+    //Login API Call
+  }
 
   return (
     <Authlayout>
-      <div className='lg:w-[70] h-3/4 md:h-full flex flex-col justify-center'>
+      <div className='lg:w-[70%] h-3/4 md:h-full flex flex-col justify-center'>
         <h3 className='text-xl font-semibold text-black'>
           Welcome Back
           </h3>
