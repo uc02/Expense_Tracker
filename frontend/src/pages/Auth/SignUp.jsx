@@ -16,7 +16,30 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   //handle SignUp Form submit
-  const handleSignUp = async (e) => {}
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    
+    let profileImageUrl = "";
+
+    if(!fullName){
+      setError("Please enter your Name");
+      return;
+    }
+
+    if(!validateEmail(email)){
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    if(!password){
+      setError('Please enter the password');
+      return;
+    }
+
+    setError("")
+
+    //SignUp API Call 
+  }
 
   return (
     <Authlayout>
