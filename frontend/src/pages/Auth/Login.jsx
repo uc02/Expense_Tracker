@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Authlayout from '../../components/layouts/Authlayout'
 import { Link, useNavigate } from 'react-router-dom'
 import Input from '../../components/Input/Input';
+import { validateEmail } from '../../utils/helper';
 
 const Login = () => {
 
